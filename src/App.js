@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import Employees from './components/Employees'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+const App = () => {
+
+  const employees = [
+      { id: 1, firstname: "John", lastname: "Doe", job: "Developer" },
+      { id: 2, firstname: "Anna", lastname: "Tiger", job: "Developer" },
+      { id: 2, firstname: "Jim", lastname: "Lion", job: "UX/UI" },
+  ];
+
+  return(
+    <div>
+      <Employees employees = {employees}/>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
